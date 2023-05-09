@@ -1,18 +1,67 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>題目一</h1>
+    <List :data="type1"/>
+    <List :data="type2"/>
+    <List :data="type3"/>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue';
+import List from '@/components/List.vue';
 
 export default {
   name: 'Home',
   components: {
-    HelloWorld,
+    List,
+  },
+  data() {
+    return {
+      type1: [
+        {
+          name: 'Anna',
+          year: 10,
+          class: 'A',
+        },
+        {
+          name: 'Mark',
+          year: 10,
+          class: 'M',
+        },
+      ],
+      type2: [
+        {
+          title: 'Javascript Info',
+          category: 'book',
+          rating: 10,
+        },
+        {
+          title: 'Fantasy',
+          category: 'movie',
+          rating: 5,
+        },
+      ],
+      type3: [
+        {
+          winner: 'Amy',
+          rank: 1,
+        },
+        {
+          winner: 'Bob',
+          rank: 2,
+        },
+        {
+          winner: 'Jack',
+          rank: 2,
+        },
+      ],
+    };
   },
 };
 </script>
+
+<style scoped>
+h1{
+  text-align: center;
+}
+</style>
