@@ -4,7 +4,7 @@
     :class="{ 'lists__wrap--rank': typeMode === 3 }"
     v-if="data.length"
   >
-    <div class="list" v-show="typeMode === 1">
+    <div class="list" v-if="typeMode === 1">
       <div class="list__item" v-for="(item, index) in data" :key="index">
         <div class="list__item__field">
           <span class="field__txt">Student: {{ item.name }}</span>
@@ -16,7 +16,7 @@
       </div>
     </div>
 
-    <div class="list" v-show="typeMode === 2">
+    <div class="list" v-if="typeMode === 2">
       <div class="list__item" v-for="(item, index) in data" :key="index">
         <div class="list__item__field">
           <span class="field__txt">Title: {{ item.title }}</span>
@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <div class="list" v-show="typeMode === 3">
+    <div class="list" v-if="typeMode === 3">
       <p class="list__rankTitle">Top 3 Winners</p>
       <div class="list__item" v-for="(item, index) in data" :key="index">
         <div class="list__item__field">
