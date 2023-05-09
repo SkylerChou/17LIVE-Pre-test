@@ -30,7 +30,7 @@
     </div>
 
     <div class="list" v-else-if="typeMode === 3">
-      <p class="list__rankTitle">Top 3 Winners</p>
+      <h3 class="list__rankTitle">Top 3 Winners</h3>
       <div class="list__item" v-for="(item, index) in data" :key="index">
         <div class="list__item__field">
           <span class="field__txt">{{ item.rank }} {{ item.winner }}</span>
@@ -80,12 +80,9 @@ export default {
 
 <style scoped>
 .lists__wrap {
-  max-width: 960px;
   background-color: #efefef;
   padding: 20px;
   margin-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .list {
   list-style-type: none;

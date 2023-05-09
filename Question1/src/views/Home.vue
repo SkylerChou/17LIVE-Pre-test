@@ -1,8 +1,11 @@
 <template>
   <div class="home">
     <h1>題目一</h1>
+    <h2>Type 1</h2>
     <List :data="type1"/>
+    <h2>Type 2</h2>
     <List :data="type2"/>
+    <h2>Type 3</h2>
     <List :data="type3"/>
   </div>
 </template>
@@ -61,7 +64,15 @@ export default {
 </script>
 
 <style scoped>
+.home{
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
 h1{
   text-align: center;
+}
+h2{
+  text-align: left;
 }
 </style>
